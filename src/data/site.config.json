@@ -1,0 +1,16 @@
+{
+  "siteName": "super-mortal 的博客",
+  "siteDescription": "记录 AI、代码、网站搭建和技术观察。",
+  "siteAuthor": "super-mortal",
+  "githubUser": "super-mortal",
+  "githubRepo": "https://github.com/super-mortal",
+  "projectOverrides": {
+    "md-wechat": {
+      "icon": "wechat"
+    },
+    "Steam-game-cover-gets": {
+      "icon": "download"
+    }
+  },
+  "projectGroups": []
+}

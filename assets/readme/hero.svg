@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">super-mortal 的博客</title>
+  <desc id="hero-desc">super-mortal 的个人博客：AI 工具、代码实践、网站搭建与手把手教程。右侧四个卡片展示博客的四大内容板块。</desc>
+
+  <rect width="1200" height="320" rx="24" fill="#f8f7f4"/>
+
+  <g id="title-block">
+    <text x="64" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="600" letter-spacing="4" fill="#b0532b">AI · Code · Web · Tutorial</text>
+    <text x="64" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="56" font-weight="700" fill="#1b1c1e">super-mortal 的博客</text>
+    <text x="64" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="24" fill="#5f6166">AI 工具 · 代码实践 · 网站搭建 · 手把手教程</text>
+    <text x="64" y="258" font-family="ui-monospace, 'Cascadia Code', Consolas, monospace" font-size="19" fill="#7f8187">hub.supermortal.cn · zh-CN</text>
+  </g>
+
+  <g id="pillar-cards">
+    <g id="card-ai">
+      <rect x="720" y="56" width="202" height="96" rx="12" fill="#ffffff" stroke="#d3cfc3" stroke-width="1"/>
+      <rect x="742" y="80" width="4" height="48" rx="2" fill="#b0532b"/>
+      <text x="762" y="94" font-family="ui-monospace, 'Cascadia Code', Consolas, monospace" font-size="17" fill="#b0532b">01</text>
+      <text x="762" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#1b1c1e">AI 工具</text>
+    </g>
+    <g id="card-code">
+      <rect x="938" y="56" width="202" height="96" rx="12" fill="#ffffff" stroke="#d3cfc3" stroke-width="1"/>
+      <rect x="960" y="80" width="4" height="48" rx="2" fill="#b0532b"/>
+      <text x="980" y="94" font-family="ui-monospace, 'Cascadia Code', Consolas, monospace" font-size="17" fill="#b0532b">02</text>
+      <text x="980" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#1b1c1e">代码实践</text>
+    </g>
+    <g id="card-web">
+      <rect x="720" y="168" width="202" height="96" rx="12" fill="#ffffff" stroke="#d3cfc3" stroke-width="1"/>
+      <rect x="742" y="192" width="4" height="48" rx="2" fill="#b0532b"/>
+      <text x="762" y="206" font-family="ui-monospace, 'Cascadia Code', Consolas, monospace" font-size="17" fill="#b0532b">03</text>
+      <text x="762" y="234" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#1b1c1e">网站搭建</text>
+    </g>
+    <g id="card-tutorial">
+      <rect x="938" y="168" width="202" height="96" rx="12" fill="#ffffff" stroke="#d3cfc3" stroke-width="1"/>
+      <rect x="960" y="192" width="4" height="48" rx="2" fill="#b0532b"/>
+      <text x="980" y="206" font-family="ui-monospace, 'Cascadia Code', Consolas, monospace" font-size="17" fill="#b0532b">04</text>
+      <text x="980" y="234" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#1b1c1e">手把手教程</text>
+    </g>
+  </g>
+</svg>
