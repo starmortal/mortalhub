@@ -94,6 +94,30 @@ export const getReadingMinutes = (post: BlogPost) => {
   return Math.max(1, Math.ceil(readingUnits / 350));
 };
 
+export const getPostWordCount = (post: BlogPost) => {
+  const body = (post as BlogPost & { body?: string }).body ?? '';
+  const text = body
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`[^`]*`/g, ' ')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[[^\]]*\]\([^)]*\)/g, '$1')
+    .replace(/\[(grid|\/grid)\]/gi, ' ')
+    .replace(/\{%[^%]*%\}/g, ' ')
+    .replace(/[#>*_|~\-`]/g, ' ');
+
+  const cjkChars = text.match(/[\u4e00-\u9fff]/g)?.length ?? 0;
+  const words = text
+    .replace(/[\u4e00-\u9fff]/g, ' ')
+    .match(/[A-Za-z0-9_]+/g)?.length ?? 0;
+
+  return cjkChars + words;
+};
+
+export const getPostImageCount = (post: BlogPost) => {
+  const body = (post as BlogPost & { body?: string }).body ?? '';
+  return body.match(/!\[[^\]]*\]\([^)]*\)/g)?.length ?? 0;
+};
+
 export const getAdjacentPosts = (posts: BlogPost[], currentPost: BlogPost) => {
   const orderedPosts = sortPostsByDate(posts);
   const index = orderedPosts.findIndex((post) => post.id === currentPost.id);

@@ -14,6 +14,8 @@ import {
   getPostPath,
   getPostTags,
   getPostUpdatedDate,
+  getPostWordCount,
+  getPostImageCount,
   getReadingMinutes,
   getRelatedPosts,
   getTagPath,
@@ -39,6 +41,8 @@ const tags = getPostTags(post);
 const description = getPostDescription(post);
 const cover = getPostCover(post);
 const readingMinutes = getReadingMinutes(post);
+const wordCount = getPostWordCount(post);
+const imageCount = getPostImageCount(post);
 const { newer, older } = getAdjacentPosts(posts, post);
 const relatedPosts = getRelatedPosts(posts, post);
 const tableOfContents = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
@@ -106,7 +110,7 @@ const articleSchema = {
         {post.data.updated && (
           <span>更新于 {formatDate(post.data.updated)}</span>
         )}
-        <span>{readingMinutes} 分钟阅读</span>
+        <span>{readingMinutes} 分钟阅读 · {wordCount.toLocaleString('zh-CN')} 字 · {imageCount} 张图</span>
       </div>
       <h1>{post.data.title}</h1>
       <p>{description}</p>
