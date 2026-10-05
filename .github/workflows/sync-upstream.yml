@@ -1,0 +1,24 @@
+name: Sync upstream
+on:
+  schedule:
+    - cron: '13,43 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Pull upstream and merge
+        run: |
+          git remote | grep upstream || git remote add upstream https://github.com/super-mortal/mortalhub.git
+          git fetch upstream main
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git merge upstream/main --no-edit
+          git push origin main
